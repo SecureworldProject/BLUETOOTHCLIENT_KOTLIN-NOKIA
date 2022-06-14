@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BTClient</string>
+    <string name="turn_off_str">Turn Off</string>
+    <string name="turn_on_str">Turn On</string>
+    <string name="discoverable_str">Discoverable</string>
+    <string name="get_paired_devices_str">Get Paired Devices</string>
+    <string name="testBtn">Add image</string>
+    <string name="messageBtn">Send message</string>
+    <string name="pairedCtv"/>
+    <string name="hint">hint</string>
+    <string name="textInput_hint">Enter device number</string>
+    <string name="the_captured_photo">The captured photo</string>
+    <string name="capture">Capture</string>
+    <string name="fake_capture">Fake capture</string>
+    <string name="confirm_upload_to_google_drive">Confirm Upload to Google Drive</string>
+</resources>
