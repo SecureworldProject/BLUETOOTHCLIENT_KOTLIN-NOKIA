@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.bluetoothclient">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!--Permissions-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -17,8 +20,6 @@
     <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,14 +29,15 @@
         android:roundIcon="@mipmap/ic_bluetooth_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BluetoothClient"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:requestLegacyExternalStorage="true">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ConnectActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
@@ -43,6 +45,27 @@
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ConfigActivity"
+            android:parentActivityName=".ConnectActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConfigActivity" />
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GeolocationActivity">
+        </activity>
+        <activity
+            android:name=".EnvironmentActivity">
+        </activity>
+
         <provider
             android:authorities="com.example.challengecapturerapp.fileprovider"
             android:name="androidx.core.content.FileProvider"

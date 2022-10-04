@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/gyroscopeData2"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gyroscopeData"
+        app:layout_constraintTop_toBottomOf="@+id/magnetometerData2" />
+
+    <TextView
+        android:id="@+id/magnetometerData2"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toEndOf="@+id/magnetometerData"
+        app:layout_constraintTop_toBottomOf="@+id/orientationTv" />
+
+    <TextView
+        android:id="@+id/magnetometerData"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/magnetometerTv"
+        app:layout_constraintTop_toBottomOf="@+id/orientationTv" />
+
+    <TextView
+        android:id="@+id/gyroscopeData"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/gyroscopeTv"
+        app:layout_constraintTop_toBottomOf="@+id/magnetometerData" />
+
+    <TextView
+        android:id="@+id/longitudeData2"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/longitudeTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeData2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/longitudeData"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/longitudeTv"
+        app:layout_constraintEnd_toStartOf="@+id/longitudeData2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/longitudeTv"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeData" />
+
+    <TextView
+        android:id="@+id/magnetometerTv"
+        android:layout_width="106dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gps_magnetometer"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orientationTv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/gyroscopeTv"
+        android:layout_width="106dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gps_gyroscope"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magnetometerTv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/orientationTv"
+        android:layout_width="180dp"
+        android:layout_height="31dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/gps_orientation"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitudeData"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/altitudeData"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitudeTv" />
+
+    <TextView
+        android:id="@+id/altitudeData2"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/orientationTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toEndOf="@+id/altitudeData"
+        app:layout_constraintTop_toBottomOf="@+id/altitudeTv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/altitudeTv"
+        android:layout_width="180dp"
+        android:layout_height="31dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/gps_height"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeTv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/longitudeTv"
+        android:layout_width="69dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gps_longitude"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeTv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/latitudeTv"
+        android:layout_width="69dp"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gps_latitude"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpsTv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/gpsTv"
+        android:layout_width="180dp"
+        android:layout_height="31dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/gps_location"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="@string/geolocationTitle"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latitudeData2"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/latitudeTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latitudeTv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/latitudeData"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/latitudeTv"
+        app:layout_constraintEnd_toStartOf="@+id/latitudeData2"
+        app:layout_constraintTop_toTopOf="@+id/latitudeTv"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/geo_updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/getData"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/geo_sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/geo_updateBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
