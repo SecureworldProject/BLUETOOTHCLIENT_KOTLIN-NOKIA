@@ -193,16 +193,14 @@ class ConfigActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun listBtDevices(){
+        pairedTV.text = ""
         pairedDevices = bluetoothAdapter?.bondedDevices
         if(pairedDevices?.isNotEmpty() == true){
             pairedDevicesNotEmpty = pairedDevices as MutableSet<BluetoothDevice>
-            //pairedTV.text = ""
             pairedDevicesNotEmpty.forEachIndexed {i, device ->
                 val deviceName = device.name
                 val deviceHardwareAddress = device.address // MAC address
                 pairedTV.append("$i - $deviceName ($deviceHardwareAddress)\n")
-                pairedTV.movementMethod = ScrollingMovementMethod()
-                println("${deviceName},${deviceHardwareAddress}")
             }
         }
         else{

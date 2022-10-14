@@ -293,7 +293,7 @@ class ConnectActivity : AppCompatActivity() {
                 val bytes = ByteArrayOutputStream()
                 resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes)
                 myConnection?.sendBitmap(filename,bytes)*/
-
+                Toast.makeText(this, "Image sent", Toast.LENGTH_SHORT).show()
                 myConnection?.endConnection()
                 myConnection = null
                 printRed()
