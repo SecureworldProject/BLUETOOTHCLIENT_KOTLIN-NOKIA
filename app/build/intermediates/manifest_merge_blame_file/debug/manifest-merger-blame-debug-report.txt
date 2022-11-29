@@ -62,22 +62,22 @@
 30-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:21:64-87
 31
 32    <permission
-32-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+32-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 33        android:name="com.example.bluetoothclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-33-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+33-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 34        android:protectionLevel="signature" />
-34-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+34-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 35
 36    <uses-permission android:name="com.example.bluetoothclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-36-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-36-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+36-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+36-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 37
 38    <application
 38-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:23:5-79:19
 39        android:allowBackup="true"
 39-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:24:9-35
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-40-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\3830c71be6c3296caf4881875570fca1\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+40-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 41        android:dataExtractionRules="@xml/data_extraction_rules"
 41-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:25:9-65
 42        android:debuggable="true"
@@ -178,85 +178,85 @@
 91        </provider>
 92
 93        <uses-library
-93-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+93-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
 94            android:name="androidx.window.extensions"
-94-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+94-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
 95            android:required="false" />
-95-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+95-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
 96        <uses-library
-96-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+96-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
 97            android:name="androidx.window.sidecar"
-97-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+97-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
 98            android:required="false" />
-98-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\18f82669bd98983def2f897f530cd835\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+98-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
 99
 100        <activity
-100-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\f18c8a1b2d0a18892b247136e3abd5ef\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+100-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 101            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-101-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\f18c8a1b2d0a18892b247136e3abd5ef\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+101-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 102            android:exported="false"
-102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\f18c8a1b2d0a18892b247136e3abd5ef\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+102-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\f18c8a1b2d0a18892b247136e3abd5ef\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+103-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 104
 105        <meta-data
-105-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\c1ace5c8cfd57055b8b29abed853fca5\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+105-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 106            android:name="com.google.android.gms.version"
-106-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\c1ace5c8cfd57055b8b29abed853fca5\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+106-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 107            android:value="@integer/google_play_services_version" />
-107-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\c1ace5c8cfd57055b8b29abed853fca5\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+107-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 108
 109        <provider
-109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 110            android:name="androidx.startup.InitializationProvider"
-110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
 111            android:authorities="com.example.bluetoothclient.androidx-startup"
-111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 112            android:exported="false" >
-112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 113            <meta-data
-113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 114                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 115                android:value="androidx.startup" />
-115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\8de4d0cd10da2ea021092ace379a5845\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 116            <meta-data
-116-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\89850a778fb406ba89b9e875fff86f20\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+116-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 117                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-117-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\89850a778fb406ba89b9e875fff86f20\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+117-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 118                android:value="androidx.startup" />
-118-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\89850a778fb406ba89b9e875fff86f20\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+118-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 119            <meta-data
-119-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+119-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
 120                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-120-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+120-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
 121                android:value="androidx.startup" />
-121-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+121-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
 122        </provider>
 123
 124        <receiver
-124-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+124-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
 125            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-125-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+125-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
 126            android:directBootAware="false"
-126-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+126-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
 127            android:enabled="true"
-127-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+127-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
 128            android:exported="true"
-128-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+128-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
 129            android:permission="android.permission.DUMP" >
-129-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+129-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
 130            <intent-filter>
-130-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+130-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
 131                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-131-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
-131-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+131-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+131-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
 132            </intent-filter>
 133            <intent-filter>
-133-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+133-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
 134                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-134-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
-134-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ff3eb0acb8f2f71086761169424715c5\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+134-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+134-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
 135            </intent-filter>
 136        </receiver>
 137    </application>

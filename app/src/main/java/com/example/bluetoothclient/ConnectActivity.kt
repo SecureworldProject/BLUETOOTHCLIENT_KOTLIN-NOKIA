@@ -9,8 +9,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
@@ -22,7 +20,6 @@ import android.widget.Button
 import android.widget.ScrollView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -160,7 +157,9 @@ class ConnectActivity : AppCompatActivity() {
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_RECORD_AUDIO)) {
                         Toast.makeText(this, "Not enough permissions...", Toast.LENGTH_SHORT).show()
                     } else if (myConnection != null){
-                        myConnection?.sendMessage("Hello World")                    }
+                        myConnection?.sendMessage("Hello World")
+                        myConnection?.endConnection()
+                    }
                     else{
                         Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
                     }
@@ -169,7 +168,7 @@ class ConnectActivity : AppCompatActivity() {
                 geoBtn.setOnClickListener{
                     if (myConnection != null) {
                         val geoIntent = Intent(this, GeolocationActivity::class.java)
-                        intentJsonLauncher.launch(geoIntent)
+                        intentGeoLauncher.launch(geoIntent)
                     }
                     else{
                         Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
@@ -180,7 +179,7 @@ class ConnectActivity : AppCompatActivity() {
             envBtn.setOnClickListener{
                 if (myConnection != null) {
                     val envIntent = Intent(this, EnvironmentActivity::class.java)
-                    intentJsonLauncher.launch(envIntent)
+                    intentEnvLauncher.launch(envIntent)
                 }
                 else{
                     Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
@@ -239,7 +238,7 @@ class ConnectActivity : AppCompatActivity() {
         return result
     }
 
-    private var intentJsonLauncher =
+    /*private var intentJsonLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             val data: Intent? = result.data
             if (result.resultCode == RESULT_OK && data != null) {
@@ -254,7 +253,44 @@ class ConnectActivity : AppCompatActivity() {
             else if (result.resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Error receiving json", Toast.LENGTH_SHORT).show()
             }
+        }*/
+
+    private var intentGeoLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val data: Intent? = result.data
+            if (result.resultCode == RESULT_OK && data != null) {
+                val json: String = data.extras?.getString("json").toString()
+                val filename = "capture.geo"
+                myConnection?.sendMessage("\u000B")
+                myConnection?.sendMessage(filename)
+                myConnection?.sendMessage(json)
+                myConnection?.endConnection()
+                myConnection = null
+                printRed()
+            }
+            else if (result.resultCode == RESULT_CANCELED) {
+                Toast.makeText(this, "Error receiving json", Toast.LENGTH_SHORT).show()
+            }
         }
+
+    private var intentEnvLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val data: Intent? = result.data
+            if (result.resultCode == RESULT_OK && data != null) {
+                val json: String = data.extras?.getString("json").toString()
+                val filename = "capture.env"
+                myConnection?.sendMessage("\u000B")
+                myConnection?.sendMessage(filename)
+                myConnection?.sendMessage(json)
+                myConnection?.endConnection()
+                myConnection = null
+                printRed()
+            }
+            else if (result.resultCode == RESULT_CANCELED) {
+                Toast.makeText(this, "Error receiving json", Toast.LENGTH_SHORT).show()
+            }
+        }
+
 
     private var intentConfigLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -421,6 +457,12 @@ class ConnectActivity : AppCompatActivity() {
             val data: Intent? = result.data
             if (result.resultCode == RESULT_OK && data != null) {
                 selectedAudioUri = data.data!!
+                val filename = getFileName(selectedAudioUri)
+                val inputData: ByteArray? = getBytes(this,selectedAudioUri)
+                myConnection?.sendFile(filename,inputData)
+                myConnection?.endConnection()
+                myConnection = null
+                printRed()
             }
             else if (result.resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Error selecting audio", Toast.LENGTH_SHORT).show()
@@ -500,7 +542,7 @@ class ConnectActivity : AppCompatActivity() {
             }
         }
 
-        fun sendBitmap(filename: String, bitmap: ByteArrayOutputStream){
+        /*fun sendBitmap(filename: String, bitmap: ByteArrayOutputStream){
             Log.i(TAG, "Client: Sending")
             val outputStream = this.socket?.outputStream
             try {
@@ -511,7 +553,7 @@ class ConnectActivity : AppCompatActivity() {
             } catch(e: Exception) {
                 Log.e(TAG, "Client: Cannot send", e)
             }
-        }
+        }*/
 
         fun sendFile(filename: String, inputData: ByteArray?){
             Log.i(TAG, "Client: Sending")

@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-45:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\89020f7a135b47e9829c032288940f95\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\ced2e88b8f69d8b966ef66806c375b1b\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\64d1b43b791e128d62b79071e8509041\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\4b350c5f36cc2db7ff2a80d075ef04bb\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",

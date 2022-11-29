@@ -1,4 +1,4 @@
-#Fri Oct 14 16:56:21 CEST 2022
+#Tue Nov 29 13:40:48 CET 2022
 base.0=C\:\\Users\\guerrero\\AndroidStudioProjects\\BLUETOOTHCLIENT_KOTLIN-NOKIA\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\guerrero\\AndroidStudioProjects\\BLUETOOTHCLIENT_KOTLIN-NOKIA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\guerrero\\AndroidStudioProjects\\BLUETOOTHCLIENT_KOTLIN-NOKIA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex

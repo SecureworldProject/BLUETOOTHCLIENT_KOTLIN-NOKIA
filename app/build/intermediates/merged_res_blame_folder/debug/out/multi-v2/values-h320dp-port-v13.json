@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-45:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\64d1b43b791e128d62b79071e8509041\\transformed\\material-1.6.1\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\4b350c5f36cc2db7ff2a80d075ef04bb\\transformed\\material-1.6.1\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
