@@ -46,6 +46,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_bluetooth_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.BluetoothClient" >
         <activity
             android:name="com.example.bluetoothclient.ConnectActivity"
