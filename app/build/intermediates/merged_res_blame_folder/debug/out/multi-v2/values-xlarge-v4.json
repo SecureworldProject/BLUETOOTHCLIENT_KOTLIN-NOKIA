@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-45:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\89020f7a135b47e9829c032288940f95\\transformed\\appcompat-1.5.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\ced2e88b8f69d8b966ef66806c375b1b\\transformed\\appcompat-1.5.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
