@@ -10,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.util.Log
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
@@ -72,7 +73,7 @@ class ConfigActivity : AppCompatActivity() {
             }
 
             inputLayout.setEndIconOnClickListener {
-                val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
+                val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH_CONNECT)
                 if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                     println("Cannot turn off due to not enough permissions...")
                     //return
@@ -99,7 +100,7 @@ class ConfigActivity : AppCompatActivity() {
 
             turnOnBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == false) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
+                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH_CONNECT)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         println("Cannot turn off due to not enough permissions...")
                         //return
@@ -113,7 +114,7 @@ class ConfigActivity : AppCompatActivity() {
 
             turnOffBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
+                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH_CONNECT)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         println("Cannot turn off due to not enough permissions...")
                         //return
@@ -127,7 +128,7 @@ class ConfigActivity : AppCompatActivity() {
 
             pairedBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
+                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH_CONNECT)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         println("Cannot list devices due to not enough permissions...")
                         //return
@@ -141,7 +142,7 @@ class ConfigActivity : AppCompatActivity() {
 
             discoverableBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
+                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH_CONNECT)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         println("Cannot list devices due to not enough permissions...")
                         //return
@@ -256,6 +257,7 @@ class ConfigActivity : AppCompatActivity() {
                 if (allPermsGranted){
                     // Success (do nothing, the code is written so only if there is permission continues executing)
                 } else {
+                    Log.i(TAG, "Bluetooth permission not granted")
                     Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
                 }
             }

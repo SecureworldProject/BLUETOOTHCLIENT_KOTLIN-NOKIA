@@ -91,7 +91,7 @@ class ConnectActivity : AppCompatActivity() {
                 }
 
                 connectBtn.setOnClickListener {
-                    val neededPerms = arrayListOf(android.Manifest.permission.BLUETOOTH)
+                    val neededPerms = arrayListOf(android.Manifest.permission.BLUETOOTH_CONNECT)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         Toast.makeText(this, "Not enough permissions...", Toast.LENGTH_SHORT).show()
                     } else {
@@ -263,7 +263,7 @@ class ConnectActivity : AppCompatActivity() {
                 val filename = "capture.geo"
                 myConnection?.sendMessage("\u000B")
                 myConnection?.sendMessage(filename)
-                myConnection?.sendMessage(json)
+                myConnection?.sendMessage(json) //sending the file
                 myConnection?.endConnection()
                 myConnection = null
                 printRed()
@@ -564,6 +564,7 @@ class ConnectActivity : AppCompatActivity() {
                 outputStream?.write(filenameLength)
                 outputStream?.write(filename.toByteArray())
                 outputStream?.write(inputData)
+                Log.i(TAG, "Filename: $filename")
                 Log.i(TAG, "Bytes: $inputData")
                 outputStream?.flush()
                 //outputStream?.close()
@@ -621,21 +622,7 @@ class ConnectActivity : AppCompatActivity() {
         var allPermsGranted: Boolean
 
         when (requestCode){
-            REQUEST_CODE_BLUETOOTH -> {
-                allPermsGranted = true
-                for (res in grantResults) {
-                    if (res != PackageManager.PERMISSION_GRANTED){
-                        allPermsGranted = false
-                        break
-                    }
-                }
-                if (allPermsGranted){
-                    // Success (do nothing, the code is written so only if there is permission continues executing)
-                } else {
-                    Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
-                }
-            }
-            /*REQUEST_CODE_BLUETOOTH_CONNECT -> {
+            /*REQUEST_CODE_BLUETOOTH -> {
                 allPermsGranted = true
                 for (res in grantResults) {
                     if (res != PackageManager.PERMISSION_GRANTED){
@@ -649,6 +636,21 @@ class ConnectActivity : AppCompatActivity() {
                     Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
                 }
             }*/
+            REQUEST_CODE_BLUETOOTH_CONNECT -> {
+                allPermsGranted = true
+                for (res in grantResults) {
+                    if (res != PackageManager.PERMISSION_GRANTED){
+                        allPermsGranted = false
+                        break
+                    }
+                }
+                if (allPermsGranted){
+                    // Success (do nothing, the code is written so only if there is permission continues executing)
+                } else {
+                    Log.i(TAG, "Bluetooth permission not granted")
+                    Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
+                }
+            }
             REQUEST_CODE_RECORD_AUDIO -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Audio permission Granted", Toast.LENGTH_SHORT).show()

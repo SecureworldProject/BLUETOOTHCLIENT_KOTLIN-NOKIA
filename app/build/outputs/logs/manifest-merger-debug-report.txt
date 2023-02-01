@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
 MERGED from [androidx.preference:preference:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\d1a342c09f15055e467023942818a2a7\transformed\preference-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.3.6] C:\Users\guerrero\.gradle\caches\transforms-3\5e55ce7d999ac7e29c759e762cc2fcb0\transformed\jetified-fragment-ktx-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\guerrero\.gradle\caches\transforms-3\7fa066a1460f9b8ce0ff83ea7d41a983\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:17:1-24:12
@@ -69,87 +69,91 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\guerrero\.gradle
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\15cec5a3a89f1d44b976382981fee460\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\9941949d98c258eb0dbf56c934ccb85d\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\a58ad0b24c8e57fd5999dc4bf5cd5ddc\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
 	package
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-81:12
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:1-87:12
 		INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:6:5-81
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:6:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:7:5-79
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:7:22-76
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:8:5-65
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:8:22-62
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:9:5-71
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:9:22-68
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:10:5-80
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:10:22-77
-uses-permission#android.permission.ACCESS_MEDIA_LOCATION
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:11:5-80
-	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:11:22-77
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:14:5-67
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:7:5-8:38
+	android:maxSdkVersion
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:8:9-35
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:14:22-65
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:7:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:15:5-74
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:9:5-10:38
+	android:maxSdkVersion
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:10:9-35
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:15:22-71
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:9:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:14:5-65
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:14:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:15:5-71
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:15:22-68
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:16:22-77
+uses-permission#android.permission.ACCESS_MEDIA_LOCATION
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:17:22-77
 uses-permission#android.permission.BLUETOOTH_ADVERTISE
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:16:5-78
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:22:5-78
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:16:22-75
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:22:22-75
 uses-permission#android.permission.BLUETOOTH_CONNECT
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:17:5-76
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:23:5-76
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:17:22-73
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:23:22-73
 uses-permission#android.permission.BLUETOOTH_SCAN
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:18:5-73
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:24:5-73
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:18:22-70
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:24:22-70
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:19:5-85
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:25:5-85
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:19:22-82
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:25:22-82
 uses-feature#android.hardware.bluetooth
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:20:5-86
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:26:5-86
 	android:required
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:20:61-84
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:26:61-84
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:20:19-60
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:26:19-60
 uses-feature#android.hardware.bluetooth_le
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:21:5-89
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:27:5-89
 	android:required
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:21:64-87
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:27:64-87
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:21:19-63
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:27:19-63
 application
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:23:5-79:19
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:29:5-85:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\guerrero\.gradle\caches\transforms-3\4b350c5f36cc2db7ff2a80d075ef04bb\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
@@ -177,95 +181,95 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gu
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\guerrero\.gradle\caches\transforms-3\ecc36a119ae273f4c74706236cc5a097\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\guerrero\.gradle\caches\transforms-3\ecc36a119ae273f4c74706236cc5a097\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:requestLegacyExternalStorage
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:33:9-52
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:39:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:30:9-35
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:36:9-35
 	android:label
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:28:9-41
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:34:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:26:9-54
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:32:9-54
 	android:roundIcon
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:29:9-55
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:35:9-55
 	tools:targetApi
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:32:9-29
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:38:9-29
 	android:icon
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:27:9-44
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:33:9-44
 	android:allowBackup
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:24:9-35
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:30:9-35
 	android:theme
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:31:9-53
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:37:9-53
 	android:dataExtractionRules
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:25:9-65
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:31:9-65
 activity#com.example.bluetoothclient.ConnectActivity
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:35:9-47:20
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:41:9-53:20
 	android:windowSoftInputMode
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:38:13-52
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:44:13-52
 	android:exported
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:36:13-44
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:42:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:39:13-42:29
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:45:13-48:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:47:27-74
 intent-filter#category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:43:13-46:29
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:49:13-52:29
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:44:17-76
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:50:17-76
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:44:27-73
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:50:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:45:17-78
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:51:17-78
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:45:27-75
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:51:27-75
 activity#com.example.bluetoothclient.ConfigActivity
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:49:9-61:20
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:55:9-67:20
 	android:parentActivityName
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:51:13-58
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:57:13-58
 	android:windowSoftInputMode
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:53:13-52
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:59:13-52
 	android:exported
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:52:13-36
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:58:13-36
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:50:13-43
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:56:13-43
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:54:13-56:51
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:60:13-62:51
 	android:value
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:56:17-48
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:62:17-48
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:55:17-63
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:61:17-63
 activity#com.example.bluetoothclient.GeolocationActivity
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:62:9-64:20
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:68:9-70:20
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:63:13-48
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:69:13-48
 activity#com.example.bluetoothclient.EnvironmentActivity
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:65:9-67:20
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:71:9-73:20
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:66:13-48
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:72:13-48
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:69:9-78:20
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:75:9-84:20
 	android:grantUriPermissions
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:73:13-47
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:79:13-47
 	android:authorities
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:70:13-80
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:76:13-80
 	android:exported
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:72:13-37
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:78:13-37
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:71:13-62
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:77:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:75:13-77:57
+ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:81:13-83:57
 	android:resource
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:77:17-54
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:83:17-54
 	android:name
-		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:76:17-67
+		ADDED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:82:17-67
 uses-sdk
 INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
