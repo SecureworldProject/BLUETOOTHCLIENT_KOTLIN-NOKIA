@@ -260,7 +260,7 @@ class ConnectActivity : AppCompatActivity() {
             val data: Intent? = result.data
             if (result.resultCode == RESULT_OK && data != null) {
                 val json: String = data.extras?.getString("json").toString()
-                val filename = "capture.geo"
+                val filename = "capture.gps"
                 myConnection?.sendMessage("\u000B")
                 myConnection?.sendMessage(filename)
                 myConnection?.sendMessage(json) //sending the file
