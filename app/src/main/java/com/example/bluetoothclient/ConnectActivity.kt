@@ -91,7 +91,7 @@ class ConnectActivity : AppCompatActivity() {
                 }
 
                 connectBtn.setOnClickListener {
-                    val neededPerms = arrayListOf(android.Manifest.permission.BLUETOOTH_CONNECT)
+                    val neededPerms = arrayListOf(android.Manifest.permission.BLUETOOTH)
                     if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
                         Toast.makeText(this, "Not enough permissions...", Toast.LENGTH_SHORT).show()
                     } else {
@@ -622,7 +622,7 @@ class ConnectActivity : AppCompatActivity() {
         var allPermsGranted: Boolean
 
         when (requestCode){
-            /*REQUEST_CODE_BLUETOOTH -> {
+            REQUEST_CODE_BLUETOOTH -> {
                 allPermsGranted = true
                 for (res in grantResults) {
                     if (res != PackageManager.PERMISSION_GRANTED){
@@ -635,8 +635,8 @@ class ConnectActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
                 }
-            }*/
-            REQUEST_CODE_BLUETOOTH_CONNECT -> {
+            }
+            /*REQUEST_CODE_BLUETOOTH_CONNECT -> {
                 allPermsGranted = true
                 for (res in grantResults) {
                     if (res != PackageManager.PERMISSION_GRANTED){
@@ -650,7 +650,7 @@ class ConnectActivity : AppCompatActivity() {
                     Log.i(TAG, "Bluetooth permission not granted")
                     Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
                 }
-            }
+            }*/
             REQUEST_CODE_RECORD_AUDIO -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Audio permission Granted", Toast.LENGTH_SHORT).show()
