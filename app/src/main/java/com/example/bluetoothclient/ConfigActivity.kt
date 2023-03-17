@@ -6,30 +6,26 @@ import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 import java.util.*
 
 
 const val TAG: String = "secureworld"   // tag to use in the log
 
+@Suppress("DEPRECATION")
 class ConfigActivity : AppCompatActivity() {
 
     // Constants
-    private val REQUEST_CODE_BLUETOOTH = 3
+    private val bluetoothPermissionRequestCode = 3
+    private val bluetoothConnectPermissionRequestCode = 4
 
     //Widgets
     private lateinit var pairedTV: TextView
@@ -40,13 +36,12 @@ class ConfigActivity : AppCompatActivity() {
     private lateinit var indexDeviceT: TextInputEditText
     private lateinit var inputLayout: TextInputLayout
 
-    lateinit var bluetoothManager: BluetoothManager
-    var bluetoothAdapter: BluetoothAdapter? = null
-    var index: Int = -1
+    private lateinit var bluetoothManager: BluetoothManager
+    private var bluetoothAdapter: BluetoothAdapter? = null
+    private var index: Int = -1
     private lateinit var myDevice: BluetoothDevice
-    var pairedDevices: Set<BluetoothDevice>? = null
+    private var pairedDevices: Set<BluetoothDevice>? = null
     private lateinit var pairedDevicesNotEmpty: Set<BluetoothDevice>
-    private lateinit var selectedImageUri: Uri
 
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstancestate: Bundle?) {
@@ -61,6 +56,7 @@ class ConfigActivity : AppCompatActivity() {
         indexDeviceT = findViewById(R.id.pairedTiet)
         inputLayout = findViewById(R.id.pairedTil)
 
+        checkBluetoothPermissions()
         //Creates BluetoothManager and BluetoothAdapter
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             bluetoothManager = getSystemService(BluetoothManager::class.java)
@@ -73,40 +69,29 @@ class ConfigActivity : AppCompatActivity() {
             }
 
             inputLayout.setEndIconOnClickListener {
-                val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
-                if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
-                    println("Cannot turn off due to not enough permissions...")
-                    //return
-                } else {
-                    listBtDevices()
-                    if (indexDeviceT.text.toString().isNotEmpty()) { //Checks myDevice field is not empty
-                        if (indexDeviceT.text.toString()
-                                .toInt() <= pairedDevicesNotEmpty.size
-                        ) { //Checks number is in the range of devices list
-                            index = indexDeviceT.text.toString().toInt()
-                            myDevice = pairedDevicesNotEmpty.elementAt(index)
-                            val intentSendDevice = Intent()
-                            intentSendDevice.putExtra("MacAddress", myDevice.address)
-                            setResult(RESULT_OK, intentSendDevice)
-                            finish()
-                        } else {
-                            Toast.makeText(this, "Number out of range", Toast.LENGTH_SHORT).show()
-                        }
+                listBtDevices()
+                if (indexDeviceT.text.toString().isNotEmpty()) { //Checks myDevice field is not empty
+                    if (indexDeviceT.text.toString()
+                            .toInt() <= pairedDevicesNotEmpty.size
+                    ) { //Checks number is in the range of devices list
+                        index = indexDeviceT.text.toString().toInt()
+                        myDevice = pairedDevicesNotEmpty.elementAt(index)
+                        val intentSendDevice = Intent()
+                        intentSendDevice.putExtra("MacAddress", myDevice.address)
+                        setResult(RESULT_OK, intentSendDevice)
+                        finish()
                     } else {
-                        Toast.makeText(this, "Type a number", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Number out of range", Toast.LENGTH_SHORT).show()
                     }
+                } else {
+                    Toast.makeText(this, "Type a number", Toast.LENGTH_SHORT).show()
                 }
             }
 
+
             turnOnBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == false) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
-                    if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
-                        println("Cannot turn off due to not enough permissions...")
-                        //return
-                    } else {
-                        enableBt()
-                    }
+                    enableBt()
                 } else {
                     Toast.makeText(this, "Bluetooth already on", Toast.LENGTH_SHORT).show()
                 }
@@ -114,13 +99,7 @@ class ConfigActivity : AppCompatActivity() {
 
             turnOffBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
-                    if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
-                        println("Cannot turn off due to not enough permissions...")
-                        //return
-                    } else {
-                        disableBt()
-                    }
+                    disableBt()
                 } else {
                     Toast.makeText(this, "Bluetooth already off", Toast.LENGTH_SHORT).show()
                 }
@@ -128,13 +107,7 @@ class ConfigActivity : AppCompatActivity() {
 
             pairedBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
-                    if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
-                        println("Cannot list devices due to not enough permissions...")
-                        //return
-                    } else {
-                        listBtDevices()
-                    }
+                    listBtDevices()
                 } else {
                     Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
                 }
@@ -142,13 +115,7 @@ class ConfigActivity : AppCompatActivity() {
 
             discoverableBtn.setOnClickListener {
                 if (bluetoothAdapter?.isEnabled == true) {
-                    val neededPerms = arrayListOf<String>(android.Manifest.permission.BLUETOOTH)
-                    if (!ensureAppPermissions(neededPerms, REQUEST_CODE_BLUETOOTH)) {
-                        println("Cannot list devices due to not enough permissions...")
-                        //return
-                    } else {
-                        discoverableBt()
-                    }
+                    discoverableBt()
                 } else {
                     Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
                 }
@@ -157,12 +124,12 @@ class ConfigActivity : AppCompatActivity() {
             return
         }
     }
-    var intentBtEnableLauncher =
+    private var intentBtEnableLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == AppCompatActivity.RESULT_OK) {
+            if (result.resultCode == RESULT_OK) {
                 Toast.makeText(this, "Bluetooth enabled", Toast.LENGTH_SHORT).show()
             }
-            if (result.resultCode == AppCompatActivity.RESULT_CANCELED) {
+            if (result.resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Bluetooth not enabled", Toast.LENGTH_SHORT).show()
                 //handle cancel
             }
@@ -178,9 +145,9 @@ class ConfigActivity : AppCompatActivity() {
         Toast.makeText(this, "Bluetooth turned off", Toast.LENGTH_SHORT).show()
     }
 
-    var intentBtDiscoverabilityLauncher =
+    private var intentBtDiscoverabilityLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == AppCompatActivity.RESULT_CANCELED) {
+            if (result.resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Bluetooth not discoverable", Toast.LENGTH_SHORT).show()
                 //handle cancel
             }
@@ -210,60 +177,50 @@ class ConfigActivity : AppCompatActivity() {
         }
     }
 
-    private fun ensureAppPermissions(neededPerms: ArrayList<String>, requestCode: Int): Boolean {
-        val permsToRequest = arrayListOf<String>()
-
-        // Check already satisfied permissions
-        for (p in neededPerms) {
-            if (p != "" && ContextCompat.checkSelfPermission(this, p) != PackageManager.PERMISSION_GRANTED){
-                permsToRequest.add(p)
+    private fun checkBluetoothPermissions() {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.R) {
+            // If the Android version is greater than 11.0 (Android 11)
+            if (checkSelfPermission(android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                // If Bluetooth permissions have not been granted, we ask for BLUETOOTH_CONNECT permission
+                requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH_CONNECT ), bluetoothConnectPermissionRequestCode)
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
+            // If the Android version is greater than 6.0 (Marshmallow)
+            if (checkSelfPermission(android.Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
+                // If Bluetooth permissions have not been granted, we ask for BLUETOOTH permission
+                requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH), bluetoothPermissionRequestCode)
             }
         }
-
-        // Request all the non-satisfied permissions at once
-        if (permsToRequest.isNotEmpty()) {
-            ActivityCompat.requestPermissions(
-                this,
-                permsToRequest.toTypedArray(),
-                requestCode
-            )
-            return false
+        else{
+            // If the Android version is lower than 6.0 (Marshmallow)
+            // Bluetooth permissions are not required
         }
-
-        // After asking the user for permissions, check again and return if they are granted now (does not work because permission requesting is asynchronous)
-        /*for (p in neededPerms) {
-            if (p != "" && ContextCompat.checkSelfPermission(this, p) != PackageManager.PERMISSION_GRANTED){
-                return false
-            }
-        }*/
-        return true
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        // TODO: super call was commented in an example (check why)
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        var allPermsGranted: Boolean
-
-        when (requestCode){
-            REQUEST_CODE_BLUETOOTH -> {
-                allPermsGranted = true
-                for (res in grantResults) {
-                    if (res != PackageManager.PERMISSION_GRANTED){
-                        allPermsGranted = false
-                        break
-                    }
-                }
-                if (allPermsGranted){
-                    // Success (do nothing, the code is written so only if there is permission continues executing)
+        when (requestCode) {
+            bluetoothPermissionRequestCode -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Bluetooth permission granted
+                    Log.i(TAG, "Bluetooth permission granted")
+                    Toast.makeText(this, "Bluetooth permission granted", Toast.LENGTH_SHORT).show()
                 } else {
+                    // Bluetooth permission denied
                     Log.i(TAG, "Bluetooth permission not granted")
                     Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
                 }
             }
-
-            else -> {
-                // What to do when any other permission was requested
+            bluetoothConnectPermissionRequestCode -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Bluetooth permission granted
+                    Log.i(TAG, "Bluetooth permission granted")
+                    Toast.makeText(this, "Bluetooth permission granted", Toast.LENGTH_SHORT).show()
+                } else {
+                    // Bluetooth permission denied
+                    Log.i(TAG, "Bluetooth permission not granted")
+                    Toast.makeText(this, "Bluetooth permission not granted", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
