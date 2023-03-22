@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="26"
 8-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
 9-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml
@@ -69,38 +69,38 @@
 37-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:27:64-87
 38
 39    <permission
-39-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+39-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 40        android:name="com.example.bluetoothclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-40-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+40-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 41        android:protectionLevel="signature" />
-41-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+41-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 42
 43    <uses-permission android:name="com.example.bluetoothclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-43-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-43-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+43-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+43-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 44
 45    <application
-45-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:29:5-85:19
+45-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:29:5-88:19
 46        android:allowBackup="true"
 46-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:30:9-35
 47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\c863b934cd93f4c4317be9a6e87430c4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+47-->[androidx.core:core:1.9.0] C:\Users\guerrero\.gradle\caches\transforms-3\842e1d080c8d956a8f17cf9e7a71cc8d\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 48        android:dataExtractionRules="@xml/data_extraction_rules"
 48-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:31:9-65
 49        android:debuggable="true"
-50        android:fullBackupContent="@xml/backup_rules"
-50-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:32:9-54
-51        android:icon="@mipmap/ic_bluetooth"
-51-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:33:9-44
-52        android:label="@string/app_name"
-52-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:34:9-41
-53        android:requestLegacyExternalStorage="true"
-53-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:39:9-52
-54        android:roundIcon="@mipmap/ic_bluetooth_round"
-54-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:35:9-55
-55        android:supportsRtl="true"
-55-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:36:9-35
-56        android:testOnly="true"
+50        android:extractNativeLibs="false"
+51        android:fullBackupContent="@xml/backup_rules"
+51-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:32:9-54
+52        android:icon="@mipmap/ic_bluetooth"
+52-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:33:9-44
+53        android:label="@string/app_name"
+53-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:34:9-41
+54        android:requestLegacyExternalStorage="true"
+54-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:39:9-52
+55        android:roundIcon="@mipmap/ic_bluetooth_round"
+55-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:35:9-55
+56        android:supportsRtl="true"
+56-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:36:9-35
 57        android:theme="@style/Theme.BluetoothClient" >
 57-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:37:9-53
 58        <activity
@@ -166,108 +166,112 @@
 88-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:71:9-73:20
 88-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:72:13-48
 89        </activity>
-90
-91        <!-- FileProvider configuration -->
-92        <provider
-92-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:76:9-84:20
-93            android:name="androidx.core.content.FileProvider"
-93-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:77:13-62
-94            android:authorities="com.example.bluetoothclient.provider"
-94-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:78:13-71
-95            android:exported="false"
-95-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:80:13-37
-96            android:grantUriPermissions="true" >
-96-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:79:13-47
-97            <meta-data
-97-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:81:13-83:57
-98                android:name="android.support.FILE_PROVIDER_PATHS"
-98-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:82:17-67
-99                android:resource="@xml/provider_path" />
-99-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:83:17-54
-100        </provider>
-101
-102        <uses-library
-102-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-103            android:name="androidx.window.extensions"
-103-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-104            android:required="false" />
-104-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-105        <uses-library
-105-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-106            android:name="androidx.window.sidecar"
-106-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-107            android:required="false" />
-107-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\0f25c32db1b5d194bef990ffb0c77c24\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+90        <activity android:name="com.example.bluetoothclient.RecorderActivity" >
+90-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:74:9-76:20
+90-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:75:13-45
+91        </activity>
+92
+93        <!-- FileProvider configuration -->
+94        <provider
+94-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:79:9-87:20
+95            android:name="androidx.core.content.FileProvider"
+95-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:80:13-62
+96            android:authorities="com.example.bluetoothclient.provider"
+96-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:81:13-71
+97            android:exported="false"
+97-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:83:13-37
+98            android:grantUriPermissions="true" >
+98-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:82:13-47
+99            <meta-data
+99-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:84:13-86:57
+100                android:name="android.support.FILE_PROVIDER_PATHS"
+100-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:85:17-67
+101                android:resource="@xml/provider_path" />
+101-->C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\src\main\AndroidManifest.xml:86:17-54
+102        </provider>
+103
+104        <activity
+104-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\ca0facfec25cee641c9980916457f80e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+105            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+105-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\ca0facfec25cee641c9980916457f80e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+106            android:exported="false"
+106-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\ca0facfec25cee641c9980916457f80e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+107-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\ca0facfec25cee641c9980916457f80e\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 108
-109        <activity
-109-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-110            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-110-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-111            android:exported="false"
-111-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-112            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-112-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\guerrero\.gradle\caches\transforms-3\b8bc4bbce1938362e0653a322b2d21f9\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-113
-114        <meta-data
-114-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-115            android:name="com.google.android.gms.version"
-115-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-116            android:value="@integer/google_play_services_version" />
-116-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\09f8bc2350a9bc1893d788cc5d9c96c4\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-117
-118        <provider
-118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-119            android:name="androidx.startup.InitializationProvider"
-119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-120            android:authorities="com.example.bluetoothclient.androidx-startup"
-120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-121            android:exported="false" >
-121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-122            <meta-data
-122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-123                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-124                android:value="androidx.startup" />
-124-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\3f91442ddeca45af18e76f7debcc4ec4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-125            <meta-data
-125-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-126                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-126-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-127                android:value="androidx.startup" />
-127-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\guerrero\.gradle\caches\transforms-3\4bcbe61296c58901fbb1bb50b4f25a68\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-128            <meta-data
-128-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
-129                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-129-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
-130                android:value="androidx.startup" />
-130-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
-131        </provider>
-132
-133        <receiver
-133-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
-134            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-134-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
-135            android:directBootAware="false"
-135-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
-136            android:enabled="true"
-136-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
-137            android:exported="true"
-137-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
-138            android:permission="android.permission.DUMP" >
-138-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
-139            <intent-filter>
-139-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
-140                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-140-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
-140-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
-141            </intent-filter>
-142            <intent-filter>
-142-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
-143                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-143-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
-143-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\adf885f3ffded3dff953a847247201de\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
-144            </intent-filter>
-145        </receiver>
-146    </application>
-147
-148</manifest>
+109        <meta-data
+109-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\a2dbb9730464fc50820eea24e4582b7e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+110            android:name="com.google.android.gms.version"
+110-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\a2dbb9730464fc50820eea24e4582b7e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+111            android:value="@integer/google_play_services_version" />
+111-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\guerrero\.gradle\caches\transforms-3\a2dbb9730464fc50820eea24e4582b7e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+112
+113        <provider
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+114            android:name="androidx.startup.InitializationProvider"
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+115            android:authorities="com.example.bluetoothclient.androidx-startup"
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+116            android:exported="false" >
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+117            <meta-data
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+119                android:value="androidx.startup" />
+119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\guerrero\.gradle\caches\transforms-3\ad9cd097dae443a07337bff9bd53b35d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+120            <meta-data
+120-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\guerrero\.gradle\caches\transforms-3\ed6e966504e62af9a8c522de19583340\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:29:13-31:52
+121                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+121-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\guerrero\.gradle\caches\transforms-3\ed6e966504e62af9a8c522de19583340\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:30:17-78
+122                android:value="androidx.startup" />
+122-->[androidx.lifecycle:lifecycle-process:2.6.0] C:\Users\guerrero\.gradle\caches\transforms-3\ed6e966504e62af9a8c522de19583340\transformed\jetified-lifecycle-process-2.6.0\AndroidManifest.xml:31:17-49
+123            <meta-data
+123-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:30:13-32:52
+124                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+124-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:31:17-85
+125                android:value="androidx.startup" />
+125-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:32:17-49
+126        </provider>
+127
+128        <uses-library
+128-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+129            android:name="androidx.window.extensions"
+129-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+130            android:required="false" />
+130-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+131        <uses-library
+131-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+132            android:name="androidx.window.sidecar"
+132-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+133            android:required="false" />
+133-->[androidx.window:window:1.0.0] C:\Users\guerrero\.gradle\caches\transforms-3\11376c54a653f6d5afeb29d42d742913\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+134
+135        <receiver
+135-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:35:9-47:20
+136            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+136-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:36:13-76
+137            android:directBootAware="false"
+137-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:37:13-44
+138            android:enabled="true"
+138-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:38:13-35
+139            android:exported="true"
+139-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:39:13-36
+140            android:permission="android.permission.DUMP" >
+140-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:40:13-57
+141            <intent-filter>
+141-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:41:13-43:29
+142                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+142-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:42:17-91
+142-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:42:25-88
+143            </intent-filter>
+144            <intent-filter>
+144-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:44:13-46:29
+145                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+145-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:45:17-85
+145-->[androidx.profileinstaller:profileinstaller:1.2.1] C:\Users\guerrero\.gradle\caches\transforms-3\68d026decb7bf663b3fc31286e2e029a\transformed\jetified-profileinstaller-1.2.1\AndroidManifest.xml:45:25-82
+146            </intent-filter>
+147        </receiver>
+148    </application>
+149
+150</manifest>

@@ -45,4 +45,6 @@
     <string name="update">UPDATE</string>
     <string name="send">SEND</string>
     <string name="getData">GET DATA</string>
+    <string name="recordTimeText">00:00</string>
+    <string name="reset">RESET</string>
 </resources>

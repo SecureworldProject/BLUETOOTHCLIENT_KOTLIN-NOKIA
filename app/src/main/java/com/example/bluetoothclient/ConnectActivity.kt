@@ -30,6 +30,7 @@ import androidx.core.content.FileProvider
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
+import java.text.SimpleDateFormat
 import java.util.*
 
 @Suppress("NAME_SHADOWING", "DEPRECATION")
@@ -37,10 +38,11 @@ import java.util.*
 class ConnectActivity : AppCompatActivity() {
 
     // Constants
-    private val cameraPermissionRequestCode = 1
-    private val bluetoothPermissionRequestCode = 2
-    private val bluetoothConnectPermissionRequestCode = 3
-    private val audioPermissionRequestCode = 4
+    private val cameraPermissionRequestCode = 0
+    private val bluetoothPermissionRequestCode = 1
+    private val bluetoothConnectPermissionRequestCode = 2
+    private val audioPermissionRequestCode = 3
+    private val storagePermissionRequestCode = 4
 
     private lateinit var bluetoothManager: BluetoothManager
     private var bluetoothAdapter: BluetoothAdapter? = null
@@ -65,6 +67,10 @@ class ConnectActivity : AppCompatActivity() {
     private lateinit var selectedAudioUri: Uri
 
     private lateinit var capturedImageUri: Uri
+    private lateinit var capturedVideoUri: Uri
+    //private lateinit var reducedVideoUri: Uri
+    private lateinit var recordedAudioUri: Uri
+
     private var photoByteArray: ByteArray? = null
 
     override fun onCreate(savedInstancestate: Bundle?) {
@@ -85,102 +91,98 @@ class ConnectActivity : AppCompatActivity() {
         checkPermissions()
         checkBluetoothPermissions()
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { //Checks if the Android version is lower than 6.0 (Marshmallow)
-            Log.i(TAG, "Compatible")
-            bluetoothManager = getSystemService(BluetoothManager::class.java)
-            bluetoothAdapter = bluetoothManager.adapter
-            //Checks if device supports Bluetooth
-            if (bluetoothAdapter == null) {
-                //Device doesn't support Bluetooth
-                Toast.makeText(this, "Device doesn't support Bluetooth ", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                configBtn.setOnClickListener{
-                    val intentConfig = Intent(this, ConfigActivity::class.java)
-                    intentConfigLauncher.launch(intentConfig)
-                    Log.i(TAG, "Mac address is: $macAddress")
-                }
-
-                connectBtn.setOnClickListener {
-                    Log.i(TAG, "Mac address is: $macAddress")
-                    if(macAddress != null){
-                        myConnection = Connection(selectedDevice)
-                        try{
-                            myConnection!!.startConnection()
-                        }
-                        catch(noServerException: Exception ){
-                            Toast.makeText(this, "Error connecting to ${selectedDevice?.name}", Toast.LENGTH_SHORT).show()
-                            Log.e(TAG, "No bluetooth server")
-                        }
-                        if (myConnection!!.socket?.isConnected == true){
-                            printGreen()
-                        }
-                    }
-                    else{
-                        Toast.makeText(this, "Not mac address", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                imageBtn.setOnClickListener {
-                    if (myConnection != null){
-                        selectImage()
-                    }
-                    else{
-                            Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-
-                videoBtn.setOnClickListener {
-                    if (myConnection != null){
-                        selectVideo()
-                    }
-                    else{
-                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                audioBtn.setOnClickListener {
-                    if (myConnection != null){
-                        selectAudio()
-                    }
-                    else{
-                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                textBtn.setOnClickListener {
-                    if (myConnection != null){
-                        myConnection?.sendMessage("Hello World")
-                        myConnection?.endConnection()
-                    }
-                    else{
-                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                geoBtn.setOnClickListener{
-                    if (myConnection != null) {
-                        val geoIntent = Intent(this, GeolocationActivity::class.java)
-                        intentGeoLauncher.launch(geoIntent)
-                    }
-                    else{
-                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                envBtn.setOnClickListener{
-                    if (myConnection != null) {
-                        val envIntent = Intent(this, EnvironmentActivity::class.java)
-                        intentEnvLauncher.launch(envIntent)
-                    }
-                    else{
-                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
-                    }
-                }
-        } else {
-            Log.d(TAG, "Not compatible")
+        Log.i(TAG, "Compatible")
+        bluetoothManager = getSystemService(BluetoothManager::class.java)
+        bluetoothAdapter = bluetoothManager.adapter
+        //Checks if device supports Bluetooth
+        if (bluetoothAdapter == null) {
+            //Device doesn't support Bluetooth
+            Toast.makeText(this, "Device doesn't support Bluetooth ", Toast.LENGTH_SHORT).show()
         }
+        else{
+            configBtn.setOnClickListener{
+                val intentConfig = Intent(this, ConfigActivity::class.java)
+                intentConfigLauncher.launch(intentConfig)
+                Log.i(TAG, "Mac address is: $macAddress")
+            }
+
+            connectBtn.setOnClickListener {
+                Log.i(TAG, "Mac address is: $macAddress")
+                if(macAddress != null){
+                    myConnection = Connection(selectedDevice)
+                    try{
+                        myConnection!!.startConnection()
+                    }
+                    catch(noServerException: Exception ){
+                        Toast.makeText(this, "Error connecting to ${selectedDevice?.name}", Toast.LENGTH_SHORT).show()
+                        Log.e(TAG, "No bluetooth server")
+                    }
+                    if (myConnection!!.socket?.isConnected == true){
+                        printGreen()
+                    }
+                }
+                else{
+                    Toast.makeText(this, "Not mac address", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            imageBtn.setOnClickListener {
+                if (myConnection != null){
+                    selectImage()
+                }
+                else{
+                        Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            videoBtn.setOnClickListener {
+                if (myConnection != null){
+                    selectVideo()
+                }
+                else{
+                    Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            audioBtn.setOnClickListener {
+                if (myConnection != null){
+                    selectAudio()
+                }
+                else{
+                    Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            textBtn.setOnClickListener {
+                if (myConnection != null){
+                    myConnection?.sendMessage("Hello World")
+                    myConnection?.endConnection()
+                }
+                else{
+                    Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            geoBtn.setOnClickListener{
+                if (myConnection != null) {
+                    val geoIntent = Intent(this, GeolocationActivity::class.java)
+                    intentGeoLauncher.launch(geoIntent)
+                }
+                else{
+                    Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            envBtn.setOnClickListener{
+                if (myConnection != null) {
+                    val envIntent = Intent(this, EnvironmentActivity::class.java)
+                    intentEnvLauncher.launch(envIntent)
+                }
+                else{
+                    Toast.makeText(this, "Connect to a device first", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun printGreen(){
@@ -325,7 +327,7 @@ class ConnectActivity : AppCompatActivity() {
             val imageBitmap = BitmapFactory.decodeStream(inputStream)
 
             val outputStream = ByteArrayOutputStream()
-            val quality = 20 // valor entre 0 y 100 que determina la calidad de la imagen comprimida
+            val quality = 20 // value between 0 and 100 that determines the quality of the compressed image
             imageBitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream)
 
             photoByteArray = outputStream.toByteArray()
@@ -348,14 +350,12 @@ class ConnectActivity : AppCompatActivity() {
             when {
                 //Select "Choose from Gallery" to pick image from gallery
                 choice[item] == "Choose from Gallery" -> {
-                    val pictureFromGallery = Intent(
-                        Intent.ACTION_GET_CONTENT,
-                    )
-                    pictureFromGallery.addCategory(Intent.CATEGORY_OPENABLE)
-                    pictureFromGallery.type = "image/*"
-                    pictureFromGallery.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-                    pictureFromGallery.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    intentPictureGalleyLauncher.launch(pictureFromGallery)
+                    val galleryImageIntent = Intent(Intent.ACTION_GET_CONTENT)
+                    galleryImageIntent.addCategory(Intent.CATEGORY_OPENABLE)
+                    galleryImageIntent.type = "image/*"
+                    galleryImageIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                    galleryImageIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    intentPictureGalleyLauncher.launch(galleryImageIntent)
                 }
                 //Select "Take Photo" to take a photo
                 choice[item] == "Take Photo" -> {
@@ -399,22 +399,59 @@ class ConnectActivity : AppCompatActivity() {
             }
         }
 
-    private var intentCaptureVideoLauncher =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            val data: Intent? = result.data
-            if (result.resultCode == RESULT_OK && data != null) {
-                selectedVideoUri = data.extras?.get("data") as Uri
-                val filename = getFileName(selectedVideoUri)
-                val inputData: ByteArray? = getBytes(this,selectedVideoUri)
-                myConnection?.sendFile(filename,inputData)
-                myConnection?.endConnection()
-                myConnection = null
-                printRed()
-            }
-            else if (result.resultCode == RESULT_CANCELED) {
-                Toast.makeText(this, "Error capturing image", Toast.LENGTH_SHORT).show()
-            }
+    private var intentCaptureVideoLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            // Video captured successfully, convert to ByteArray and send it with myConnection
+            val filename = getFileName(capturedVideoUri)
+            //reducedVideoUri = reduceVideo(this,capturedVideoUri)!!
+            //val videoFile = File(capturedVideoUri.path!!)
+            val inputStream = contentResolver.openInputStream(capturedVideoUri)
+            val videoByteArray = inputStream?.readBytes()
+            myConnection?.sendFile(filename,videoByteArray)
+            myConnection?.endConnection()
+            myConnection = null
+            printRed()
+        } else {
+            // Display an error message if the video capture was unsuccessful
+            Toast.makeText(this, "Video capture failed", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun createVideoFile(): File {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmm", Locale.getDefault()).format(Date())
+        val videoFileName = "VIDEO_$timeStamp"
+        val storageDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES)
+        return File.createTempFile(
+            videoFileName,
+            ".mp4",
+            storageDir
+        )
+    }
+
+    /*private fun reduceVideo(context: Context, videoUri: Uri): Uri? {
+        val inputPath = videoUri.path
+        val outputDir = context.getExternalFilesDir(Environment.DIRECTORY_MOVIES)
+        val outputFileName = "reduced_video_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()) + ".mp4"
+        val outputPath = "${outputDir?.absolutePath}/$outputFileName"
+        val cmd = arrayOf(
+            "-i", inputPath,
+            "-vf", "scale=480:-2",
+            "-c:a", "copy",
+            "-preset", "ultrafast",
+            "-movflags", "+faststart",
+            outputPath
+        )
+        Config.setLogLevel(Config.getLogLevel())
+
+        val rc = FFmpeg.execute(cmd)
+
+        if (rc == Config.RETURN_CODE_SUCCESS) {
+            val file = File(outputPath)
+            return Uri.fromFile(file)
+        } else {
+            return null
+        }
+    }*/
 
     private fun selectVideo() {
         val choice = arrayOf<CharSequence>("Take Video", "Choose from Gallery", "Cancel")
@@ -425,19 +462,27 @@ class ConnectActivity : AppCompatActivity() {
             when {
                 //Select "Choose from Gallery" to pick image from gallery
                 choice[item] == "Choose from Gallery" -> {
-                    val videoFromGallery = Intent(
-                        Intent.ACTION_GET_CONTENT,
-                    )
+                    val galleryVideoIntent = Intent(Intent.ACTION_GET_CONTENT)
                     //change to pickFromVideoGallery
-                    videoFromGallery.addCategory(Intent.CATEGORY_OPENABLE)
-                    videoFromGallery.type = "video/*"
-                    intentVideoGalleyLauncher.launch(videoFromGallery)
+                    galleryVideoIntent.addCategory(Intent.CATEGORY_OPENABLE)
+                    galleryVideoIntent.type = "video/*"
+                    intentVideoGalleyLauncher.launch(galleryVideoIntent)
                 }
                 //Select "Take Video" to take a photo
                 choice[item] == "Take Video" -> {
-                    val cameraVideo = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
-                    cameraVideo.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 5)
-                    intentCaptureVideoLauncher.launch(cameraVideo)
+                    val videoFile = createVideoFile()
+                    capturedVideoUri = FileProvider.getUriForFile(this, "com.example.bluetoothclient.provider", videoFile)
+                    val captureVideoIntent = Intent(MediaStore.ACTION_VIDEO_CAPTURE).apply {
+                        putExtra(MediaStore.EXTRA_OUTPUT, capturedVideoUri)
+                    }
+                    // Check if the device has a camera app installed
+                    if (captureVideoIntent.resolveActivity(packageManager) != null) {
+                        // Launch the camera app
+                        intentCaptureVideoLauncher.launch(captureVideoIntent)
+                    } else {
+                        // Display an error message if no camera app is installed
+                        Toast.makeText(this, "No camera app found", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 //Select "Cancel" to cancel the task
                 choice[item] == "Cancel" -> {
@@ -465,16 +510,35 @@ class ConnectActivity : AppCompatActivity() {
             }
         }
 
-    private var intentCaptureAudioLauncher =
+    /*private var intentRecordAudioLauncher =
+    registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        val data: Intent? = result.data
+        if (result.resultCode == RESULT_OK && data != null) {
+            selectedAudioUri = data.data!!
+
+        }
+        else if (result.resultCode == RESULT_CANCELED) {
+            Toast.makeText(this, "Error capturing audio", Toast.LENGTH_SHORT).show()
+        }
+    }*/
+
+    private var intentRecordAudioLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            Log.d(TAG, "Enter intentRecordAudioLauncher")
             val data: Intent? = result.data
             if (result.resultCode == RESULT_OK && data != null) {
-                selectedAudioUri = data.data!!
+                val recordingFilePath: String = data.extras?.getString("recordingPath").toString()
+                recordedAudioUri = Uri.fromFile(File(recordingFilePath))
+                val filename = getFileName(recordedAudioUri)
+                val inputStream = contentResolver.openInputStream(recordedAudioUri)
+                val audioByteArray = inputStream?.readBytes()
+                myConnection?.sendFile(filename,audioByteArray)
+                myConnection?.endConnection()
+                myConnection = null
+                printRed()
 
             }
-            else if (result.resultCode == RESULT_CANCELED) {
-                Toast.makeText(this, "Error capturing audio", Toast.LENGTH_SHORT).show()
-            }
+
         }
 
     private fun selectAudio() {
@@ -486,22 +550,24 @@ class ConnectActivity : AppCompatActivity() {
             when {
                 //Select "Choose from Gallery" to pick audio from gallery
                 choice[item] == "Choose from Gallery" -> {
-                    val audioFromGallery = Intent(
+                    val galleryAudioIntent = Intent(
                         Intent.ACTION_GET_CONTENT,
                     )
-                    audioFromGallery.addCategory(Intent.CATEGORY_OPENABLE)
-                    audioFromGallery.type = "audio/*"
-                    audioFromGallery.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-                    audioFromGallery.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    intentAudioGalleyLauncher.launch(audioFromGallery)
+                    galleryAudioIntent.addCategory(Intent.CATEGORY_OPENABLE)
+                    galleryAudioIntent.type = "audio/*"
+                    galleryAudioIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                    galleryAudioIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    intentAudioGalleyLauncher.launch(galleryAudioIntent)
                 }
                 //Select "Record audio" to record an audio
                 choice[item] == "Record audio" -> {
-                    val recordAudio = Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION)
-                    if (recordAudio.resolveActivity(packageManager) != null) {
-                        intentCaptureAudioLauncher.launch(recordAudio)
+                    //Crear un Intent para iniciar la actividad de grabación de audio
+                    val recordAudioIntent = Intent(this, RecorderActivity::class.java)
+                    // Iniciar la actividad de grabación de audio
+                    if (recordAudioIntent.resolveActivity(packageManager) != null) {
+                        intentRecordAudioLauncher.launch(recordAudioIntent)
                     }
-                    //device doesn't have any application which allows you to record an audio
+                    // Device doesn't have any application which allows you to record an audio
                     else Toast.makeText(this, "Error recording audio", Toast.LENGTH_SHORT).show()
                 }
                 //Select "Cancel" to cancel the task
@@ -575,39 +641,43 @@ class ConnectActivity : AppCompatActivity() {
                 // If Bluetooth permissions have not been granted, we ask for BLUETOOTH_CONNECT permission
                 requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH_CONNECT ), bluetoothConnectPermissionRequestCode)
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
+        } else{
             // If the Android version is greater than 6.0 (Marshmallow)
             if (checkSelfPermission(android.Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
                 // If Bluetooth permissions have not been granted, we ask for BLUETOOTH permission
                 requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH), bluetoothPermissionRequestCode)
             }
         }
-        else{
-            // If the Android version is lower than 6.0 (Marshmallow)
-            // Bluetooth permissions are not required
-        }
     }
 
     private fun checkPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            // Check for record audio permissions
-            if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(
-                    arrayOf(android.Manifest.permission.BLUETOOTH),
-                    audioPermissionRequestCode
-                )
-            }
-            // Check for camera permissions
-            if (checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(
-                    arrayOf(android.Manifest.permission.CAMERA),
-                    cameraPermissionRequestCode
-                )
-            }
+        // Check for record audio permissions
+        if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(
+                arrayOf(android.Manifest.permission.RECORD_AUDIO),
+                audioPermissionRequestCode
+            )
         }
-        else{
-            // If the Android version is lower than 6.0 (Marshmallow)
-            // Bluetooth permissions are not required
+        // Check for camera permissions
+        if (checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(
+                arrayOf(android.Manifest.permission.CAMERA),
+                cameraPermissionRequestCode
+            )
+        }
+        //Check for external storage permissions
+        if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(
+                arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                storagePermissionRequestCode
+            )
+        }
+        //
+        if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(
+                arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                storagePermissionRequestCode
+            )
         }
     }
 

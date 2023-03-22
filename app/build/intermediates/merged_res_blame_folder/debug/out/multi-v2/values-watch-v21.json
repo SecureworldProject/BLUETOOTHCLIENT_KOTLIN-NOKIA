@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-45:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-50:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\ced2e88b8f69d8b966ef66806c375b1b\\transformed\\appcompat-1.5.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\a9d9e972ee593e841d35c0aa5a21a1b7\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

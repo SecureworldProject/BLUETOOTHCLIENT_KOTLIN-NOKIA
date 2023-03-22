@@ -71,6 +71,9 @@
         <activity
             android:name=".EnvironmentActivity">
         </activity>
+        <activity
+            android:name=".RecorderActivity">
+        </activity>
 
         <!-- FileProvider configuration -->
         <provider

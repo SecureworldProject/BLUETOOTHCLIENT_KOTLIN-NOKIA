@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-45:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-50:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\d1a342c09f15055e467023942818a2a7\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\ea13713e399b37ee1f03f9b5c0922e1f\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
