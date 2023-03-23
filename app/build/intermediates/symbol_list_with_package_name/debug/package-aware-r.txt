@@ -3038,6 +3038,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id binaryBtn
 id blocking
 id bottom
 id bounce
@@ -3202,6 +3203,7 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id jsonBtn
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3952,9 +3954,11 @@ string searchview_navigation_content_description
 string selected
 string send
 string send_audio
+string send_binary
 string send_env
 string send_geo
 string send_image
+string send_json
 string send_text
 string send_video
 string side_sheet_accessibility_pane_title

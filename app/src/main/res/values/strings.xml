@@ -25,6 +25,8 @@
     <string name="send_text">Send text</string>
     <string name="send_geo">Send Geolocation</string>
     <string name="send_env">Send Environment</string>
+    <string name="send_json">Send JSON</string>
+    <string name="send_binary">Send binary</string>
 
     <string name="geolocationTitle">GEOLOCATION</string>
     <string name="environmentTitle">ENVIRONMENT</string>

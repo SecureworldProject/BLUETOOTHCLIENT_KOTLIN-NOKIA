@@ -96,6 +96,24 @@
                 android:textAllCaps="true" />
 
             <Button
+                android:id="@+id/jsonBtn"
+                android:layout_width="285dp"
+                android:layout_height="62dp"
+                android:backgroundTint="#B82217"
+                android:text="@string/send_json"
+                android:textAlignment="center"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/binaryBtn"
+                android:layout_width="285dp"
+                android:layout_height="62dp"
+                android:backgroundTint="#B82217"
+                android:text="@string/send_binary"
+                android:textAlignment="center"
+                android:textAllCaps="true" />
+
+            <Button
                 android:id="@+id/textBtn"
                 android:layout_width="285dp"
                 android:layout_height="62dp"

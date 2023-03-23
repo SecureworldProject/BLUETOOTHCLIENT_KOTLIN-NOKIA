@@ -57,6 +57,8 @@ class ConnectActivity : AppCompatActivity() {
     private lateinit var videoBtn: Button
     private lateinit var audioBtn: Button
     private lateinit var textBtn: Button
+    private lateinit var jsonBtn: Button
+    private lateinit var binaryBtn: Button
     private lateinit var geoBtn: Button
     private lateinit var envBtn: Button
 
@@ -83,6 +85,8 @@ class ConnectActivity : AppCompatActivity() {
         videoBtn = findViewById(R.id.videoBtn)
         audioBtn = findViewById(R.id.audioBtn)
         textBtn = findViewById(R.id.textBtn)
+        jsonBtn = findViewById(R.id.jsonBtn)
+        binaryBtn = findViewById(R.id.binaryBtn)
         geoBtn = findViewById(R.id.geoBtn)
         envBtn = findViewById(R.id.envBtn)
 
@@ -190,6 +194,8 @@ class ConnectActivity : AppCompatActivity() {
         videoBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
         audioBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
         textBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
+        jsonBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
+        binaryBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
         geoBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
         envBtn.setBackgroundColor(Color.parseColor("#FF4CAF50"))
     }
@@ -199,6 +205,8 @@ class ConnectActivity : AppCompatActivity() {
         videoBtn.setBackgroundColor(Color.parseColor("#B82217"))
         audioBtn.setBackgroundColor(Color.parseColor("#B82217"))
         textBtn.setBackgroundColor(Color.parseColor("#B82217"))
+        jsonBtn.setBackgroundColor(Color.parseColor("#B82217"))
+        binaryBtn.setBackgroundColor(Color.parseColor("#B82217"))
         geoBtn.setBackgroundColor(Color.parseColor("#B82217"))
         envBtn.setBackgroundColor(Color.parseColor("#B82217"))
     }

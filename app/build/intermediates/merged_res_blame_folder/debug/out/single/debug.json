@@ -24,6 +24,10 @@
         "source": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-main-54:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.bluetoothclient.app-merged_res-52:/layout_activity_connect.xml.flat",
+        "source": "com.example.bluetoothclient.app-main-54:/layout/activity_connect.xml"
+    },
+    {
         "merged": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-merged_res-52:\\drawable-xxhdpi_ic_bluetooth_on.png.flat",
         "source": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-main-54:\\drawable-xxhdpi\\ic_bluetooth_on.png"
     },
@@ -118,10 +122,6 @@
     {
         "merged": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-merged_res-52:\\drawable-anydpi_ic_device.xml.flat",
         "source": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-main-54:\\drawable-anydpi\\ic_device.xml"
-    },
-    {
-        "merged": "com.example.bluetoothclient.app-merged_res-52:/layout_activity_recorder.xml.flat",
-        "source": "com.example.bluetoothclient.app-main-54:/layout/activity_recorder.xml"
     },
     {
         "merged": "C:\\Users\\guerrero\\.gradle\\daemon\\7.4\\com.example.bluetoothclient.app-merged_res-52:\\xml_data_extraction_rules.xml.flat",

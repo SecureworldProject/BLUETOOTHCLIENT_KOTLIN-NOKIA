@@ -44,7 +44,7 @@ class RecorderActivity : AppCompatActivity() {
 
     // External storage path
     private val recordingFilePath: String by lazy {
-        "${getExternalFilesDir(Environment.DIRECTORY_RECORDINGS)?.absolutePath}/recording.3gp"
+        "${getExternalFilesDir(Environment.DIRECTORY_RECORDINGS)?.absolutePath}/recording.aac"
     }
 
     private var player: MediaPlayer? = null
@@ -122,8 +122,8 @@ class RecorderActivity : AppCompatActivity() {
     private fun startRecording() {
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
-            setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
-            setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
+            setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS)
+            setAudioEncoder(MediaRecorder.AudioEncoder.AAC_ELD)
             setOutputFile(recordingFilePath)
             prepare()
         }
