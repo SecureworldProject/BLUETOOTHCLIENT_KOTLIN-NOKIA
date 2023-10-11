@@ -1,111 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ConnectActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/connectBtn"
-        android:layout_width="285dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#B82217"
-        android:importantForAccessibility="no"
-        android:text="@string/connect"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/configBtn"
-        tools:ignore="TextContrastCheck" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ConnectActivity">
 
-    <Button
-        android:id="@+id/configBtn"
-        android:layout_width="285dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#6200ED"
-        android:importantForAccessibility="no"
-        android:text="@string/config"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
+        <Button
+            android:id="@+id/connectBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:importantForAccessibility="no"
+            android:text="@string/connect"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/configBtn"
+            tools:ignore="TextContrastCheck" />
 
-    <ScrollView
-        android:id="@+id/buttonsSv"
-        android:layout_width="282dp"
-        android:layout_height="380dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/connectBtn"
-        app:layout_constraintVertical_bias="0.196">
+        <Button
+            android:id="@+id/configBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#6200ED"
+            android:importantForAccessibility="no"
+            android:text="@string/config"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="true"
-            android:orientation="vertical">
+        <Button
+            android:id="@+id/imageBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_image"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connectBtn" />
 
-            <Button
-                android:id="@+id/imageBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_image"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/jsonBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_json"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/binaryBtn" />
 
-            <Button
-                android:id="@+id/videoBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_video"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/videoBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_video"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageBtn" />
 
-            <Button
-                android:id="@+id/audioBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_audio"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/audioBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_audio"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoBtn" />
 
-            <Button
-                android:id="@+id/geoBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_geo"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/geoBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_geo"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audioBtn" />
 
-            <Button
-                android:id="@+id/envBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_env"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/envBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_env"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/geoBtn" />
 
-            <Button
-                android:id="@+id/textBtn"
-                android:layout_width="285dp"
-                android:layout_height="62dp"
-                android:backgroundTint="#B82217"
-                android:text="@string/send_text"
-                android:textAlignment="center"
-                android:textAllCaps="true" />
+        <Button
+            android:id="@+id/binaryBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_binary"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/envBtn" />
 
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/textBtn"
+            android:layout_width="285dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#B82217"
+            android:baselineAligned="false"
+            android:text="@string/send_text"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jsonBtn" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

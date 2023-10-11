@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="26"
-        android:targetSdkVersion="33" />
+        android:targetSdkVersion="34" />
 
     <!-- Permissions -->
     <!-- Request legacy Bluetooth permissions on older devices. -->
@@ -25,7 +25,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
@@ -35,6 +37,24 @@
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.RECORD_AUDIO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_IMAGES" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_VIDEO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_AUDIO" />
+        </intent>
+    </queries>
 
     <permission
         android:name="com.example.bluetoothclient.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -49,15 +69,16 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_bluetooth"
+        android:icon="@drawable/ic_bluetooth"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_bluetooth_round"
+        android:roundIcon="@drawable/ic_bluetooth"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.BluetoothClient" >
         <activity
             android:name="com.example.bluetoothclient.ConnectActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:windowSoftInputMode="adjustPan" >
             <intent-filter>
@@ -72,6 +93,7 @@
         </activity>
         <activity
             android:name="com.example.bluetoothclient.ConfigActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:parentActivityName="com.example.bluetoothclient.ConnectActivity"
             android:windowSoftInputMode="adjustPan" >
@@ -84,11 +106,17 @@
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.bluetoothclient.GeolocationActivity" >
+        <activity
+            android:name="com.example.bluetoothclient.GeolocationActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" >
         </activity>
-        <activity android:name="com.example.bluetoothclient.EnvironmentActivity" >
+        <activity
+            android:name="com.example.bluetoothclient.EnvironmentActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" >
         </activity>
-        <activity android:name="com.example.bluetoothclient.RecorderActivity" >
+        <activity
+            android:name="com.example.bluetoothclient.RecorderActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" >
         </activity>
 
         <!-- FileProvider configuration -->
@@ -144,6 +172,12 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
     </application>
