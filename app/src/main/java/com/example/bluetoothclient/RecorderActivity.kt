@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.media.MediaRecorder
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -44,7 +45,13 @@ class RecorderActivity : AppCompatActivity() {
 
     // External storage path
     private val recordingFilePath: String by lazy {
-        "${getExternalFilesDir(Environment.DIRECTORY_RECORDINGS)?.absolutePath}/recording.aac"
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            "${getExternalFilesDir(Environment.DIRECTORY_RECORDINGS)?.absolutePath}/recording.aac"
+        } else {
+            val externalStorageDir = Environment.getExternalStorageDirectory()
+            val packageName = applicationContext.packageName
+            "${externalStorageDir.absolutePath}/Android/data/$packageName/files/recordings/recording.aac"
+        }
     }
 
     private var player: MediaPlayer? = null
@@ -102,7 +109,7 @@ class RecorderActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
         val audioRecordPermissionGranted =
-            requestCode == REQUEST_RECORD_AUDIO_PERMISSION &&
+            requestCode == audioPermissionRequestCode &&
                     grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED
 
         if (!audioRecordPermissionGranted) {
@@ -112,7 +119,7 @@ class RecorderActivity : AppCompatActivity() {
 
     // Permission request
     private fun requestAudioPermission() {
-        requestPermissions(requiredPermissions, REQUEST_RECORD_AUDIO_PERMISSION)
+        requestPermissions(requiredPermissions, audioPermissionRequestCode)
     }
 
     private fun initView() {
@@ -123,7 +130,7 @@ class RecorderActivity : AppCompatActivity() {
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
             setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS)
-            setAudioEncoder(MediaRecorder.AudioEncoder.AAC_ELD)
+            setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
             setOutputFile(recordingFilePath)
             prepare()
         }
@@ -172,7 +179,7 @@ class RecorderActivity : AppCompatActivity() {
     }
 
     companion object {
-        val REQUEST_RECORD_AUDIO_PERMISSION = 201
+        const val audioPermissionRequestCode = 3
     }
 
 

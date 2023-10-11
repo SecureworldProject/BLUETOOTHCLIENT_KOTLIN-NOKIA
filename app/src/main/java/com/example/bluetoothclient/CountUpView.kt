@@ -1,5 +1,6 @@
 package com.example.bluetoothclient
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.SystemClock
 import android.util.AttributeSet
@@ -35,6 +36,7 @@ class CountUpView(
         updateCountTime(0)
     }
 
+    @SuppressLint("SetTextI18n") //No need to translate countTime
     private fun updateCountTime(countTimeSeconds: Int){
         val minutes = countTimeSeconds/60
         val seconds = countTimeSeconds%60

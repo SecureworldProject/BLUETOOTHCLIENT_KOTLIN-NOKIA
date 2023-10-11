@@ -4,16 +4,8 @@
     <string name="turn_on_str">Turn On</string>
     <string name="discoverable_str">Discoverable</string>
     <string name="get_paired_devices_str">Get Paired Devices</string>
-    <string name="testBtn">Add image</string>
-    <string name="messageBtn">Send message</string>
-    <string name="pairedCtv"/>
-    <string name="hint">hint</string>
     <string name="textInput_hint">Device number here</string>
-    <string name="the_captured_photo">The captured photo</string>
-    <string name="capture">Capture</string>
-    <string name="fake_capture">Fake capture</string>
     <string name="no_devices">No paired devices</string>
-    <string name="confirm_upload_to_google_drive">Confirm Upload to Google Drive</string>
     <string name="config">Configuration</string>
     <string name="connect">Connect</string>
     <string name="connect_to_device">Connect to %1$s</string>

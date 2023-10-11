@@ -18,20 +18,40 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.RECORD_AUDIO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_IMAGES" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_VIDEO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.READ_MEDIA_AUDIO" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_bluetooth"
+        android:icon="@drawable/ic_bluetooth"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_bluetooth_round"
+        android:roundIcon="@drawable/ic_bluetooth"
         android:supportsRtl="true"
         android:theme="@style/Theme.BluetoothClient"
         tools:targetApi="31"
@@ -39,6 +59,7 @@
 
         <activity
             android:name=".ConnectActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -53,6 +74,7 @@
 
         <activity
             android:name=".ConfigActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:parentActivityName=".ConnectActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
@@ -65,13 +87,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GeolocationActivity">
+            android:name=".GeolocationActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
         </activity>
         <activity
-            android:name=".EnvironmentActivity">
+            android:name=".EnvironmentActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
         </activity>
         <activity
-            android:name=".RecorderActivity">
+            android:name=".RecorderActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
         </activity>
 
         <!-- FileProvider configuration -->
@@ -85,5 +110,5 @@
                 android:resource="@xml/provider_path" />
         </provider>
     </application>
-
 </manifest>
+

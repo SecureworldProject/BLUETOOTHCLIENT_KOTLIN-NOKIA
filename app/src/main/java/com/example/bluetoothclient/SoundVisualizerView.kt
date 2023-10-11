@@ -50,10 +50,8 @@ class SoundVisualizerView(
         drawingWidth = w
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    public override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-
-        canvas ?: return
 
         val centerY = drawingHeight /2f
         var offsetX = drawingWidth.toFloat()

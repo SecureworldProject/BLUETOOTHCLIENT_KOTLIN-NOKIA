@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-50:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\ea13713e399b37ee1f03f9b5c0922e1f\\transformed\\preference-1.2.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\de47b77b4504edcc6a5711ef20b3ee57\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -53,76 +53,73 @@ class ConfigActivity : AppCompatActivity() {
         turnOnBtn = findViewById(R.id.turnOnBtn)
         turnOffBtn = findViewById(R.id.turnOffBtn)
         pairedBtn = findViewById(R.id.pairedBtn)
-        indexDeviceT = findViewById(R.id.pairedTiet)
-        inputLayout = findViewById(R.id.pairedTil)
+        indexDeviceT = findViewById(R.id.pairedTextInputText)
+        inputLayout = findViewById(R.id.pairedTextInputLayout)
 
         checkBluetoothPermissions()
         //Creates BluetoothManager and BluetoothAdapter
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            bluetoothManager = getSystemService(BluetoothManager::class.java)
-            bluetoothAdapter = bluetoothManager.adapter
+        bluetoothManager = getSystemService(BluetoothManager::class.java)
+        bluetoothAdapter = bluetoothManager.adapter
 
-            //Checks if myDevice supports Bluetooth
-            if (bluetoothAdapter == null) {
-                //Device doesn't support Bluetooth
-                Toast.makeText(this, "Device does not support Bluetooth ", Toast.LENGTH_SHORT).show()
-            }
-
-            inputLayout.setEndIconOnClickListener {
-                listBtDevices()
-                if (indexDeviceT.text.toString().isNotEmpty()) { //Checks myDevice field is not empty
-                    if (indexDeviceT.text.toString()
-                            .toInt() <= pairedDevicesNotEmpty.size
-                    ) { //Checks number is in the range of devices list
-                        index = indexDeviceT.text.toString().toInt()
-                        myDevice = pairedDevicesNotEmpty.elementAt(index)
-                        val intentSendDevice = Intent()
-                        intentSendDevice.putExtra("MacAddress", myDevice.address)
-                        setResult(RESULT_OK, intentSendDevice)
-                        finish()
-                    } else {
-                        Toast.makeText(this, "Number out of range", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this, "Type a number", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-
-            turnOnBtn.setOnClickListener {
-                if (bluetoothAdapter?.isEnabled == false) {
-                    enableBt()
-                } else {
-                    Toast.makeText(this, "Bluetooth already on", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            turnOffBtn.setOnClickListener {
-                if (bluetoothAdapter?.isEnabled == true) {
-                    disableBt()
-                } else {
-                    Toast.makeText(this, "Bluetooth already off", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            pairedBtn.setOnClickListener {
-                if (bluetoothAdapter?.isEnabled == true) {
-                    listBtDevices()
-                } else {
-                    Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            discoverableBtn.setOnClickListener {
-                if (bluetoothAdapter?.isEnabled == true) {
-                    discoverableBt()
-                } else {
-                    Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
-                }
-            }
-        } else {
-            return
+        //Checks if myDevice supports Bluetooth
+        if (bluetoothAdapter == null) {
+            //Device doesn't support Bluetooth
+            Toast.makeText(this, "Device does not support Bluetooth ", Toast.LENGTH_SHORT).show()
         }
+
+        inputLayout.setEndIconOnClickListener {
+            listBtDevices()
+            if (indexDeviceT.text.toString().isNotEmpty()) { //Checks myDevice field is not empty
+                if (indexDeviceT.text.toString()
+                        .toInt() <= pairedDevicesNotEmpty.size
+                ) { //Checks number is in the range of devices list
+                    index = indexDeviceT.text.toString().toInt()
+                    myDevice = pairedDevicesNotEmpty.elementAt(index)
+                    val intentSendDevice = Intent()
+                    intentSendDevice.putExtra("MacAddress", myDevice.address)
+                    setResult(RESULT_OK, intentSendDevice)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Number out of range", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Type a number", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+        turnOnBtn.setOnClickListener {
+            if (bluetoothAdapter?.isEnabled == false) {
+                enableBt()
+            } else {
+                Toast.makeText(this, "Bluetooth already on", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        turnOffBtn.setOnClickListener {
+            if (bluetoothAdapter?.isEnabled == true) {
+                disableBt()
+            } else {
+                Toast.makeText(this, "Bluetooth already off", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        pairedBtn.setOnClickListener {
+            if (bluetoothAdapter?.isEnabled == true) {
+                listBtDevices()
+            } else {
+                Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        discoverableBtn.setOnClickListener {
+            if (bluetoothAdapter?.isEnabled == true) {
+                discoverableBt()
+            } else {
+                Toast.makeText(this, "Turn on Bluetooth first", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
     private var intentBtEnableLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -184,16 +181,12 @@ class ConfigActivity : AppCompatActivity() {
                 // If Bluetooth permissions have not been granted, we ask for BLUETOOTH_CONNECT permission
                 requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH_CONNECT ), bluetoothConnectPermissionRequestCode)
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
+        } else {
             // If the Android version is greater than 6.0 (Marshmallow)
             if (checkSelfPermission(android.Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED) {
                 // If Bluetooth permissions have not been granted, we ask for BLUETOOTH permission
                 requestPermissions(arrayOf(android.Manifest.permission.BLUETOOTH), bluetoothPermissionRequestCode)
             }
-        }
-        else{
-            // If the Android version is lower than 6.0 (Marshmallow)
-            // Bluetooth permissions are not required
         }
     }
 

@@ -68,7 +68,7 @@ nonstop=false
 case "`uname`" in
   CYGWIN* )
     cygwin=true
-    ;;
+    ;
   Darwin* )
     darwin=true
     ;;

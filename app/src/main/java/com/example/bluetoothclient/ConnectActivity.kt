@@ -21,7 +21,6 @@ import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.util.Log
 import android.widget.Button
-import android.widget.ScrollView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
@@ -33,7 +32,7 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
-@Suppress("NAME_SHADOWING", "DEPRECATION")
+@Suppress("NAME_SHADOWING")
 @SuppressLint("MissingPermission")
 class ConnectActivity : AppCompatActivity() {
 
@@ -41,7 +40,7 @@ class ConnectActivity : AppCompatActivity() {
     private val cameraPermissionRequestCode = 0
     private val bluetoothPermissionRequestCode = 1
     private val bluetoothConnectPermissionRequestCode = 2
-    private val audioPermissionRequestCode = 3
+    private val recordPermissionRequestCode = 3
     private val storagePermissionRequestCode = 4
 
     private lateinit var bluetoothManager: BluetoothManager
@@ -62,15 +61,12 @@ class ConnectActivity : AppCompatActivity() {
     private lateinit var geoBtn: Button
     private lateinit var envBtn: Button
 
-    private lateinit var myView: ScrollView
-
     private lateinit var selectedImageUri: Uri
     private lateinit var selectedVideoUri: Uri
     private lateinit var selectedAudioUri: Uri
 
     private lateinit var capturedImageUri: Uri
     private lateinit var capturedVideoUri: Uri
-    //private lateinit var reducedVideoUri: Uri
     private lateinit var recordedAudioUri: Uri
 
     private var photoByteArray: ByteArray? = null
@@ -89,8 +85,6 @@ class ConnectActivity : AppCompatActivity() {
         binaryBtn = findViewById(R.id.binaryBtn)
         geoBtn = findViewById(R.id.geoBtn)
         envBtn = findViewById(R.id.envBtn)
-
-        myView = findViewById(R.id.buttonsSv)
 
         checkPermissions()
         checkBluetoothPermissions()
@@ -446,7 +440,7 @@ class ConnectActivity : AppCompatActivity() {
             "-vf", "scale=480:-2",
             "-c:a", "copy",
             "-preset", "ultrafast",
-            "-movflags", "+faststart",
+            "-mov-flags", "+fasts-tart",
             outputPath
         )
         Config.setLogLevel(Config.getLogLevel())
@@ -569,9 +563,9 @@ class ConnectActivity : AppCompatActivity() {
                 }
                 //Select "Record audio" to record an audio
                 choice[item] == "Record audio" -> {
-                    //Crear un Intent para iniciar la actividad de grabación de audio
+                    //Create an Intent to start audio recording activity
                     val recordAudioIntent = Intent(this, RecorderActivity::class.java)
-                    // Iniciar la actividad de grabación de audio
+                    // Start audio recording activity
                     if (recordAudioIntent.resolveActivity(packageManager) != null) {
                         intentRecordAudioLauncher.launch(recordAudioIntent)
                     }
@@ -663,7 +657,7 @@ class ConnectActivity : AppCompatActivity() {
         if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(
                 arrayOf(android.Manifest.permission.RECORD_AUDIO),
-                audioPermissionRequestCode
+                recordPermissionRequestCode
             )
         }
         // Check for camera permissions
@@ -681,18 +675,30 @@ class ConnectActivity : AppCompatActivity() {
             )
         }
         //
-        if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(
-                arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
-                storagePermissionRequestCode
-            )
+        if (checkSelfPermission(android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES,
+                        android.Manifest.permission.READ_MEDIA_VIDEO,
+                        android.Manifest.permission.READ_MEDIA_AUDIO),
+                    storagePermissionRequestCode
+                )
+            }
+            else{
+                if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(
+                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                        storagePermissionRequestCode
+                    )
+                }
+            }
         }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode){
-            audioPermissionRequestCode -> {
+            recordPermissionRequestCode -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Audio permission granted", Toast.LENGTH_SHORT).show()
                 }

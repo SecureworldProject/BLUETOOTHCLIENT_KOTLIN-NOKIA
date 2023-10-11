@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.arthenica:mobile-ffmpeg-full:4.4.LTS@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/34850fce79c9af37d4a2872e96d3e5c6/transformed/jetified-mobile-ffmpeg-full-4.4.LTS/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/34850fce79c9af37d4a2872e96d3e5c6/transformed/jetified-mobile-ffmpeg-full-4.4.LTS/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/32a7715a96308fd307ee574579c52864/transformed/jetified-mobile-ffmpeg-full-4.4.LTS/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/32a7715a96308fd307ee574579c52864/transformed/jetified-mobile-ffmpeg-full-4.4.LTS/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arthenica/mobile-ffmpeg-full/4.4.LTS/f764b6a927cdb7da67e039856283fb6b7f712330/mobile-ffmpeg-full-4.4.LTS-javadoc.jar!/" />

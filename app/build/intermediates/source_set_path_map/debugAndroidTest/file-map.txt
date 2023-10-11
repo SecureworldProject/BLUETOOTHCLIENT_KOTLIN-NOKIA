@@ -1,0 +1,6 @@
+com.example.bluetoothclient.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\guerrero\.gradle\caches\transforms-3\bb870de752d14a400c7a097376244bfc\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.bluetoothclient.test.app-jetified-core-1.5.0-1 C:\Users\guerrero\.gradle\caches\transforms-3\e7f9d596392c11343ff9e9343b5849fb\transformed\jetified-core-1.5.0\res
+com.example.bluetoothclient.test.app-androidTest-2 C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\build\generated\res\resValues\androidTest\debug
+com.example.bluetoothclient.test.app-mergeDebugAndroidTestResources-3 C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.bluetoothclient.test.app-mergeDebugAndroidTestResources-4 C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.bluetoothclient.test.app-merged_res-5 C:\Users\guerrero\AndroidStudioProjects\BLUETOOTHCLIENT_KOTLIN-NOKIA\app\build\intermediates\merged_res\debugAndroidTest

@@ -23,7 +23,7 @@ import kotlinx.serialization.json.Json
 
 class GeolocationActivity: AppCompatActivity() {
 
-    private val REQUEST_CODE_LOCATION = 6
+    private val locationPermissionRequestCode = 6
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
@@ -42,10 +42,10 @@ class GeolocationActivity: AppCompatActivity() {
     private lateinit var updateBtn: Button
     private lateinit var sendBtn: Button
 
-    var magnetometer = 1
-    var gyroscope = 1
+    private var magnetometer = 1
+    private var gyroscope = 1
 
-    var geolocation = Geolocation(0)
+    private var geolocation = Geolocation(0)
 
     override fun onCreate(savedInstancestate: Bundle?) {
         super.onCreate(savedInstancestate)
@@ -95,9 +95,9 @@ class GeolocationActivity: AppCompatActivity() {
         }
     }
 
-    fun getCurrentGps(pos:Int){
+    private fun getCurrentGps(pos:Int){
             if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_CODE_LOCATION)
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionRequestCode)
             }
             fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, object : CancellationToken() {
                 override fun onCanceledRequested(p0: OnTokenCanceledListener) = CancellationTokenSource().token
@@ -114,7 +114,7 @@ class GeolocationActivity: AppCompatActivity() {
             }
         }
 
-    fun getCurrentOrientation(pos:Int){
+    private fun getCurrentOrientation(pos:Int){
         geolocation.orientation[pos].x = 5.0
         geolocation.orientation[pos].y = 5.0
         geolocation.orientation[pos].z = 5.0
@@ -122,7 +122,7 @@ class GeolocationActivity: AppCompatActivity() {
 
     /*fun getLastKnownLocation() {
         if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_CODE_LOCATION)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionRequestCode)
         }
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location->
@@ -135,7 +135,7 @@ class GeolocationActivity: AppCompatActivity() {
                     Log.i(TAG, "Longitude: $longitude")
                     Log.i(TAG, "Altitude: $altitude")*//*
 
-                    //mylocation = "Latitude:"+latitude+ "\nLongitude:"+longitude
+                    //my-location = "Latitude:"+latitude+ "\nLongitude:"+longitude
                 }
                 else{
                     Toast.makeText(this, "Cannot get location.", Toast.LENGTH_SHORT).show()
@@ -150,7 +150,7 @@ class GeolocationActivity: AppCompatActivity() {
         var allPermsGranted: Boolean
 
         when (requestCode){
-            REQUEST_CODE_LOCATION -> {
+            locationPermissionRequestCode -> {
                 allPermsGranted = true
                 for (res in grantResults) {
                     if (res != PackageManager.PERMISSION_GRANTED){
@@ -177,10 +177,10 @@ class GeolocationActivity: AppCompatActivity() {
         var orientation: List<MyOrientation> = listOf(MyOrientation(0.0,0.0,0.0),MyOrientation(0.0,0.0,0.0))
 
         @Serializable
-        data class MyOrientation(var x:Double,var y:Double,var z:Double){}
+        data class MyOrientation(var x:Double,var y:Double,var z:Double)
 
         @Serializable
-        data class MyGps(var lon:Double,var lat:Double,var alt:Double){}
+        data class MyGps(var lon:Double,var lat:Double,var alt:Double)
     }
 }
 

@@ -4,7 +4,7 @@
             "outputFile": "com.example.bluetoothclient.app-mergeDebugResources-50:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\a9d9e972ee593e841d35c0aa5a21a1b7\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\guerrero\\.gradle\\caches\\transforms-3\\82dffa7f5c6fed4e59eb877c64eb1b51\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
